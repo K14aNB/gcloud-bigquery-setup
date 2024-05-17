@@ -20,7 +20,9 @@ def bqsetup(repo_name:str,runtime:str,dataset_ids:list,ds_project_id=None):
     quota_project_id=None
 
     if runtime=='colab':
-        userdata=import_module('google.colab.userdata')    
+        userdata=import_module('google.colab.userdata')
+        auth=import_module('google.colab.auth')
+        auth.authenticate_user()    
         quota_project_id=userdata.get(env_var)
     
     elif runtime in ['jupyter','python-script']:
