@@ -26,7 +26,7 @@ def bqsetup(repo_name:str,runtime:str,dataset_ids:list,ds_project_id=None):
     elif runtime in ['jupyter','python-script']:
         if os.path.isfile(os.path.join(os.path.expanduser('~'),'.config','gcloud','application_default_credentials.json')):
             if os.path.isfile(os.path.join(os.path.expanduser('~'),'.env',repo_name,'environment_variables.env')):
-                quota_project_id=get_key(dotenv_path=os.path.join(os.expanduser('~'),'.env',repo_name,'environment_variables.env'),key_to_get=env_var,encoding='utf-8')
+                quota_project_id=get_key(dotenv_path=os.path.join(os.path.expanduser('~'),'.env',repo_name,'environment_variables.env'),key_to_get=env_var,encoding='utf-8')
     
     
     if quota_project_id is not None:
