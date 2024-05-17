@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "gcloud_bigquery_setup"
+version = "0.1.0"
+description = "Function to setup bigquery client and fetch the datasets"
+authors = ["K14aNB <kirnb@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+google-cloud-bigquery = "3.21.0"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
