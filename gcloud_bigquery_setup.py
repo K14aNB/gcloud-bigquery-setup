@@ -30,7 +30,7 @@ def bqsetup(repo_name:str,runtime:str,dataset_ids:list,ds_project_id=None):
     
     
     if quota_project_id is not None:
-        client=bigquery.Client(project_id=quota_project_id)
+        client=bigquery.Client(project=quota_project_id)
         if type(ds_project_id)==str: 
             dataset_refs=[client.dataset(dataset_id,project=ds_project_id) for dataset_id in dataset_ids]
             datasets=[client.get_dataset(dataset_ref) for dataset_ref in dataset_refs]
